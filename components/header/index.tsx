@@ -31,19 +31,23 @@ export const Header = () => {
     <>
       {/* Mobile Version */}
       <header className={`lg:hidden`}>
-        <div className="fixed top-0 p-2 flex justify-between w-full z-50">
+        <div
+          className={`${
+            scrollY > 80 ? "bg-slate-50" : "bg-transparent"
+          } fixed top-0 p-2 flex justify-between w-full z-50`}
+        >
           <Link href="/" className="w-fit">
             <h1>
               <span
                 className={`${
-                  scrollY > 0 ? "text-primary" : "text-white"
+                  scrollY > 80 ? "text-primary" : "text-white"
                 }  mr-1 text-2xl py-1 font-medium`}
               >
                 Binario
               </span>
               <span
                 className={`${
-                  scrollY > 0
+                  scrollY > 80
                     ? "text-primary-foreground bg-primary"
                     : "text-primary bg-primary-foreground"
                 } px-2 py-1 rounded-lg text-lg font-normal`}
@@ -54,18 +58,17 @@ export const Header = () => {
           </Link>
           <div
             className={`${
-              scrollY > 0 ? "text-primary" : "text-white"
+              scrollY > 80 ? "text-primary" : "text-white"
             } w-fit mr-2  flex items-center gap-2`}
-            onClick={() => setVisible(true)}
           >
             <LocalMallIcon />
-            <MenuIcon />
+            <MenuIcon onClick={() => setVisible(true)} />
           </div>
         </div>
         <nav
           className={`${
             visible ? "flex" : "hidden"
-          } lg:flex flex-col lg:flex-row lg:justify-end w-screen lg:w-fit h-screen lg:h-full fixed lg:relative left-0 top-0 bg-slate-200 text-slate-800 z-50 lg:bg-transparent`}
+          } lg:flex flex-col lg:flex-row lg:justify-end w-screen lg:w-fit h-screen lg:h-full fixed lg:relative left-0 top-0 bg-slate-100 z-50 lg:bg-transparent`}
         >
           <div
             className="block lg:hidden w-fit ml-auto mt-4 mr-4"

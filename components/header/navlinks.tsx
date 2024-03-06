@@ -5,13 +5,13 @@ export const NavLinks = () => {
   const currentPath = usePathname();
 
   return (
-    <ul className="menu menu-horizontal mx-auto my-5 lg:my-0 text-center flex flex-col lg:flex-row gap-3">
+    <ul className="menu menu-horizontal mt-20 mx-auto my-5 lg:my-0 text-center flex flex-col lg:flex-row gap-6">
       <li>
         <Link
           href="#"
-          className={`px-2 py-1 ${
+          className={`px-2 py-1 border-b ${
             currentPath === "/"
-              ? "text-white bg-orange-900 rounded-md"
+              ? "text-primary border-primary rounded-md"
               : "border-transparent"
           }`}
         >
@@ -21,64 +21,33 @@ export const NavLinks = () => {
       <li>
         <Link
           href="#"
-          className={`px-2 py-1 ${
-            currentPath === "/"
-              ? "text-white bg-orange-900 rounded-md"
+          className={`px-2 py-1 border-b ${
+            currentPath === "/store"
+              ? "text-primary border-primary rounded-md"
               : "border-transparent"
           }`}
         >
-          Khaiya Editores
+          Loja
         </Link>
       </li>
       <li>
         <Link
           href="#"
           className={`px-2 py-1 ${
-            currentPath === "/"
-              ? "text-white bg-orange-900 rounded-md"
+            currentPath === "/about"
+              ? "text-primary bg-primary rounded-md"
               : "border-transparent"
           }`}
         >
-          Khaiya Serviços
+          Sobre
         </Link>
-      </li>
-      <li>
-        <details className="w-full">
-          <summary className="p-0 mt-1">Sobre</summary>
-          <ul className="p-2 bg-base-100 w-52 rounded-t-none z-50">
-            <li>
-              <Link
-                href="#"
-                className={`px-2 py-1 ${
-                  currentPath === "/"
-                    ? "text-white bg-orange-900 rounded-md"
-                    : "border-transparent"
-                }`}
-              >
-                Missão, Visão e Valores
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className={`px-2 py-1 ${
-                  currentPath === "/"
-                    ? "text-white bg-orange-900 rounded-md"
-                    : "border-transparent"
-                }`}
-              >
-                Equipa
-              </Link>
-            </li>
-          </ul>
-        </details>
       </li>
       <li>
         <Link
           href="#"
-          className={`px-2 py-1 ${
-            currentPath === "/"
-              ? "text-white bg-orange-900 rounded-md"
+          className={`px-2 py-1 border-b ${
+            currentPath === "/contact"
+              ? "text-primary border-primary rounded-md"
               : "border-transparent"
           }`}
         >
@@ -88,13 +57,13 @@ export const NavLinks = () => {
       <li>
         <Link
           href="#"
-          className={`px-2 py-1 ${
-            currentPath === "/"
-              ? "text-white bg-orange-900 rounded-md"
+          className={`px-2 py-1 border-b ${
+            currentPath === "/faq"
+              ? "text-primary border-primary rounded-md"
               : "border-transparent"
           }`}
         >
-          Blog
+          FAQ
         </Link>
       </li>
     </ul>
