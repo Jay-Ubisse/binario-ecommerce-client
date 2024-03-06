@@ -30,8 +30,8 @@ export const Header = () => {
   return (
     <>
       {/* Mobile Version */}
-      <header className={`lg:hidden z-50`}>
-        <div className="fixed top-0 p-2 flex justify-between w-full">
+      <header className={`lg:hidden`}>
+        <div className="fixed top-0 p-2 flex justify-between w-full z-50">
           <Link href="/" className="w-fit">
             <h1>
               <span
