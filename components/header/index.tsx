@@ -26,7 +26,6 @@ export const Header = () => {
 
   const headerColor = scrollY > 0 ? "bg-red-800" : "bg-transparent";
 
-  console.log(headerColor);
   return (
     <>
       {/* Mobile Version */}
