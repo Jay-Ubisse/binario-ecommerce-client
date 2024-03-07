@@ -97,7 +97,7 @@ export default function Home() {
             Precisa de ajuda? Consulte a nossa Central de Ajuda
           </h3>
           <p className="mt-5 text-base">
-            Estamos disponível para su 24 horas por dia, 7 dias por semana.
+            Estamos disponível para si 24 horas por dia, 7 dias por semana.
           </p>
         </div>
         <div className="w-fit mx-auto mt-10">
