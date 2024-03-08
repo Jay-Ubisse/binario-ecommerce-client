@@ -1,7 +1,11 @@
 import { Facebook, Instagram, X, YouTube } from "@mui/icons-material";
+import Image from "next/image";
+import Link from "next/link";
 import { FooterSection } from "./footer-section";
 
 export const Footer = () => {
+  const date = new Date();
+
   return (
     <footer className="bg-primary-foreground flex flex-col gap-8">
       <FooterSection
@@ -27,6 +31,62 @@ export const Footer = () => {
           "FAQ",
         ]}
       />
+      <hr className="h-[1px] w-[90%] mx-auto bg-muted my-6" />
+      <section>
+        <h4 className="text-slate-800 text-sm font-medium text-center">
+          Aceitamos os seguintes métodos de pagamento
+        </h4>
+        <div className="flex justify-evenly my-4">
+          <div className="h-14 w-14">
+            <Image
+              src={"/m-pesa.png"}
+              alt="m-pesa logo"
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+          <div className="h-14 w-14">
+            <Image
+              src={"/e-mola.png"}
+              alt="m-pesa logo"
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+          <div className="h-14 w-14">
+            <Image
+              src={"/visa.svg"}
+              alt="m-pesa logo"
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+          <div className="h-14 w-14">
+            <Image
+              src={"/mastercard.svg"}
+              alt="m-pesa logo"
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
+      </section>
+      <section className="bg-slate-100 text-slate-800 text-center py-3 text-xs font-light">
+        <p>
+          &copy; {date.getFullYear()} Loja Binario. Desenvolvido e mantido pela{" "}
+          <span className="underline text-primary">
+            <Link href="#">Binario</Link>
+          </span>
+        </p>
+      </section>
     </footer>
   );
 };
