@@ -8,7 +8,7 @@ export const NavLinks = () => {
     <ul className="menu menu-horizontal mt-20 mx-auto my-5 lg:my-0 text-center flex flex-col lg:flex-row gap-6">
       <li>
         <Link
-          href="#"
+          href="/"
           className={`px-2 py-1 border-b ${
             currentPath === "/"
               ? "text-primary border-primary rounded-md"
@@ -20,7 +20,7 @@ export const NavLinks = () => {
       </li>
       <li>
         <Link
-          href="#"
+          href="store"
           className={`px-2 py-1 border-b ${
             currentPath === "/store"
               ? "text-primary border-primary rounded-md"

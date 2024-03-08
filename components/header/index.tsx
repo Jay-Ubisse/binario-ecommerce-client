@@ -1,9 +1,8 @@
 "use client";
 
+import { Cart } from "@/components/cart";
 import CloseIcon from "@mui/icons-material/Close";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
 import MenuIcon from "@mui/icons-material/Menu";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { NavLinks } from "./navlinks";
@@ -60,7 +59,7 @@ export const Header = () => {
               scrollY > 80 ? "text-primary" : "text-white"
             } w-fit mr-2  flex items-center gap-2`}
           >
-            <LocalMallIcon />
+            <Cart />
             <MenuIcon onClick={() => setVisible(true)} />
           </div>
         </div>
@@ -83,16 +82,7 @@ export const Header = () => {
       </header>
       {/* Desktop version Version */}
       <header className="hidden lg:flex bg-transparent justify-between px-4">
-        <Link href="/" className="w-32 h-48">
-          <Image
-            src={"/khaiya-logo.png"}
-            width="0"
-            height="0"
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
-            alt="Image"
-          />
-        </Link>
+        <Link href="/" className="w-32 h-48"></Link>
         <section className="flex gap-8 mt-10">
           <nav
             className={`flex justify-end w-fit h-fit bg-transparent text-white`}
