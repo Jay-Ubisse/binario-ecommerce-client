@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getProducts } from "@/services/products";
+import { baseUrl, getProducts } from "@/services/products";
 import { useQuery } from "react-query";
 import Image from "next/image";
 import { ProductQuantity } from "@/components/product-quantity";
@@ -85,12 +85,13 @@ const Store = () => {
                 <CardHeader className="p-3">
                   <div className="w-full h-[7rem] border border-slate-200">
                     <Image
-                      src={""}
+                      src={`${baseUrl}${productData.image}`}
                       alt="Product Image"
                       width="0"
                       height="0"
                       sizes="100vw"
-                      style={{ width: "100%", height: "auto" }}
+                      style={{ width: "auto", height: "100%" }}
+                      className="mx-auto"
                     />
                   </div>
                   <CardTitle>{productData.name}</CardTitle>
