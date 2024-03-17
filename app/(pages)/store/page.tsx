@@ -39,7 +39,7 @@ const Store = () => {
       <>
         <HeaderBackground />
         <div className="flex justify-between items-center bg-red-200 px-4 py-2">
-          <p>Ocorreu um erro</p>
+          <p>Ocorreu um erro.</p>
           <Button
             variant={"outline"}
             size={"sm"}
