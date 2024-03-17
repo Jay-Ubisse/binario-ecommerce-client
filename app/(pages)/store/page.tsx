@@ -83,7 +83,7 @@ const Store = () => {
             <div key={productData.id}>
               <Card className="min-h-[20rem] relative">
                 <CardHeader className="p-3">
-                  <div className="w-full h-[7rem] border border-slate-200">
+                  <div className="w-full h-[7rem]">
                     <Image
                       src={`${baseUrl}${productData.image}`}
                       alt="Product Image"
