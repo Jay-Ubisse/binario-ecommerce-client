@@ -7,7 +7,7 @@ export const Footer = () => {
   const date = new Date();
 
   return (
-    <footer className="bg-primary-foreground flex flex-col gap-8">
+    <footer className="bg-primary-foreground flex flex-col gap-8 pt-7">
       <FooterSection
         title="Contacto"
         items={["vendas@binario.co.mz", "(+258} 84 883 9501 / 87 702 7713"]}

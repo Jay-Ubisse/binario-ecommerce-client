@@ -33,7 +33,7 @@ export default function Home() {
         <ProductsCarousel />
 
         <div className="w-fit mx-auto mt-4">
-          <Link href="#">
+          <Link href="/store">
             <Button>Ver Todos os Produtos</Button>
           </Link>
         </div>
